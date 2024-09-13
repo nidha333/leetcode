@@ -24,3 +24,35 @@ class Solution {
   }
 
 }
+
+//-----------------------------------------------------------------------------
+class Solution {
+  int start = 0, maxLength = 0;
+
+  String longestPalindrome(String s) {
+    if (s.isEmpty || s.length < 2) {
+      return s;
+    }
+
+    List<String> item = s.split('');
+    for (int i = 0; i < item.length - 1; i++) {
+      expandPali(item, i, i);     // Odd length palindromes
+      expandPali(item, i, i + 1); // Even length palindromes
+    }
+
+    return s.substring(start, start + maxLength);
+  }
+
+  void expandPali(List<String> s, int left, int right) {
+    while (left >= 0 && right < s.length && s[left] == s[right]) {
+      left--;
+      right++;
+    }
+
+    // Length of the palindrome is (right - left - 1)
+    if (maxLength < right - left - 1) {
+      start = left + 1;
+      maxLength = right - left - 1;
+    }
+  }
+}
