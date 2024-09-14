@@ -1,0 +1,21 @@
+class Solution {
+  bool isValid(String s) {
+    Map a = {
+        '}' : '{',
+        ']' : '[',
+        ')' : '(',
+    };
+    List b = [];
+
+    for(int i=0; i<s.length; i++){
+        if(!a.containsKey(s[i])){
+            b.add(s[i]);
+        }else if (b.isNotEmpty && b.last == a[s[i]]){
+            b.removeLast();
+        }else{
+            return false;
+        }
+    }
+    return b.isEmpty;
+  }
+}
