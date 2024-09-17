@@ -1,0 +1,14 @@
+class Solution {
+  String intToRoman(int num) {
+    StringBuffer result = StringBuffer();
+    List <int> a = [1000,900,500,400,100,90,50,40,10,9,5,4,1];
+    List <String> b = ["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"];
+    for(int i=0; i< a.length; i++){
+       while(num >= a[i]){
+        num -= a[i];
+        result.write(b[i]);
+       }
+    }
+    return result.toString();
+  }
+}
