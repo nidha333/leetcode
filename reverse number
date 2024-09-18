@@ -1,0 +1,24 @@
+class Solution {
+  int reverse(int x) {
+    final int max = 2147483647;
+    final int min = -2147483648;
+
+    bool isNegative = x < 0;
+    String reversedString = x.abs().toString().split('').reversed.join('');
+    int? reversedInt = int.tryParse(reversedString);
+
+    if(reversedInt == null){
+        return 0;
+    }
+
+    if(isNegative){
+        reversedInt = -reversedInt;
+    }
+
+    if(reversedInt > max || reversedInt < min){
+        return 0;
+    }
+
+    return reversedInt;
+}
+}
