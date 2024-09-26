@@ -1,0 +1,8 @@
+class Solution {
+  void reverseString(List<String> s) {
+    List<String> reverse = s.reversed.toList();
+    for(int i=0;i<s.length;i++){
+        s[i] = reverse[i];
+    }
+  }
+}
