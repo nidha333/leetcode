@@ -1,0 +1,26 @@
+class Solution {
+  String reverseVowels(String s) {
+    String vowels = 'aeiouAEIOU';
+    int start = 0;
+    int end = s.length - 1;
+    List<String> chars = s.split('');
+
+    while (start < end) {
+      while (start < end && !vowels.contains(chars[start])) {
+        start++;
+      }
+      while (start < end && !vowels.contains(chars[end])) {
+        end--;
+      }
+      if (start < end) {
+        String temp = chars[start];
+        chars[start] = chars[end];
+        chars[end] = temp;
+        start++;
+        end--;
+      }
+    }
+
+    return chars.join('');
+  }
+}
