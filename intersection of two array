@@ -1,0 +1,7 @@
+class Solution {
+  List<int> intersection(List<int> nums1, List<int> nums2) {
+   Set <int> newnum1 = nums1.toSet();
+   Set <int> newnum2 = nums2.toSet();
+   return newnum1.intersection(newnum2).toList();
+  }
+}
