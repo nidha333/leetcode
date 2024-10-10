@@ -1,0 +1,18 @@
+class Solution {
+  String findTheDifference(String s, String t) {
+    s = s.trim();
+    var a = s.split('');
+    var b = t.split('');
+
+    for(int i=0; i<s.length; i++){
+        for(int j=0; j<t.length; j++){
+            if(a[i].contains(b[j])){
+                b.remove(b[j]);
+                break;
+            }
+        }
+    }
+    return b.isEmpty?'' : b[0];
+  }
+
+}
