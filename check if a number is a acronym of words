@@ -1,0 +1,15 @@
+class Solution {
+  bool isAcronym(List<String> words, String s) {
+    
+    String c = '';
+    for(var wrd in words){
+        if(wrd.isNotEmpty){
+            c += wrd[0];
+        }
+    }
+    
+  return c==s;
+  }
+ 
+  
+}
