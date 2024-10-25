@@ -1,0 +1,9 @@
+class Solution {
+  int countSeniors(List<String> details) {
+    int count = 0;
+    for (String citizen in details) {
+      if (int.parse(citizen.substring(11, 13)) > 60) count++; 
+    }
+    return count;
+  }
+}
