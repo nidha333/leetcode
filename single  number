@@ -1,0 +1,15 @@
+class Solution {
+  int singleNumber(List<int> nums) {
+    
+    Set b = {};
+    for(var a in nums){
+        if(b.contains(a)){
+            b.remove(a);
+        }else{
+            b.add(a);
+        }
+    }
+    int c =b.first;
+    return c;
+  }
+}
