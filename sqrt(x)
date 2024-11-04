@@ -1,0 +1,6 @@
+class Solution {
+  int mySqrt(int x) {
+    int y =sqrt(x).toInt();
+    return y;
+  }
+}
