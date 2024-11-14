@@ -1,0 +1,16 @@
+class Solution {
+  String removeDuplicates(String s) {
+    List<String> c =[];
+    List b = s.split('');
+    for(var bb in b){
+        if(c.isNotEmpty && c.last == bb){
+            c.removeLast();
+        }else{
+            c.add(bb);
+        }
+    }
+     String d = c.join();
+     return d;
+  }
+ 
+}
