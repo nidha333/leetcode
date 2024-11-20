@@ -1,0 +1,18 @@
+class Solution {
+  String reverseOnlyLetters(String s) {
+     List<String> a = s.split('');
+  List<String> b = a.where((char) => RegExp(r'[a-zA-Z]').hasMatch(char)).toList();
+   b = b.reversed.toList();
+   int letterIndex = 0;
+  for (int i = 0; i < a.length; i++) {
+    if (RegExp(r'[a-zA-Z]').hasMatch(a[i])) {
+      a[i] = b[letterIndex];
+      letterIndex++;
+    }
+  }
+  
+  
+  return a.join('');
+
+  }
+}
