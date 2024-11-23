@@ -1,0 +1,13 @@
+class Solution {
+  int countNegatives(List<List<int>> grid) {
+    List b = [];
+    for(var aa in grid){
+        for(var aaa in aa){
+           if(aaa<0){
+            b.add(aaa);
+           }
+        }
+    }
+    return b.length;
+  }
+}
