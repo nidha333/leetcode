@@ -1,0 +1,6 @@
+class Solution {
+  String reverseWords(String s) {
+    String b = s.split(RegExp(r'\s+')).reversed.join(' ').trim();
+    return b;
+  }
+}
