@@ -1,0 +1,12 @@
+class Solution {
+  int findDuplicate(List<int> nums) {
+    Set b = {};
+    for(int i=0; i<nums.length; i++){
+        if(!b.add(nums[i])){
+            return nums[i];
+           
+        }
+    }
+    return -1;
+  }
+}
