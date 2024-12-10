@@ -1,0 +1,11 @@
+class Solution {
+  int thirdMax(List<int> nums) {
+    Set<int> b = nums.toSet();
+    List c = b.toList()..sort((x,y)=>y-x);
+    if(c.length >= 3){
+        return c[2];
+    }else{
+        return c[0];
+    }
+  }
+}
