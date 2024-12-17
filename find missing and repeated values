@@ -1,0 +1,23 @@
+class Solution {
+  List<int> findMissingAndRepeatedValues(List<List<int>> grid) {
+        int b = grid.length * grid[0].length;
+        Set<int> c ={};
+        int repeated = -1;
+        for(var aa in grid){
+            for(var aaa in aa){
+                if(c.contains(aaa)){
+                    repeated = aaa;
+                }
+                c.add(aaa);
+            }
+        }
+        int missing = -1;
+        for(int i=1;i<=b;i++){
+          if(!c.contains(i)){
+            missing = i;
+            break;
+          }
+        }
+        return [repeated , missing];
+  }
+}
