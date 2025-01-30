@@ -1,0 +1,14 @@
+class Solution {
+  String repeatedCharacter(String s) {
+    Set seen = {}; 
+
+    for (var ch in s.split('')) {
+      if (seen.contains(ch)) {
+        return ch; 
+      }
+      seen.add(ch);
+    }
+
+    return ''; 
+  }
+}
