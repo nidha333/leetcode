@@ -1,0 +1,6 @@
+class Solution {
+  String reverseWords(String s) {
+    String b = s.split(' ').map((aa)=> aa.split('').reversed.join('')).join(' ');
+    return b;
+  }
+}
