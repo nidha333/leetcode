@@ -1,0 +1,11 @@
+class Solution {
+  bool isAnagram(String s, String t) {
+    if(s.length != t.length){
+        return false;
+    }
+    var aa = s.split('')..sort();
+    var bb = t.split('')..sort();
+     return aa.join() == bb.join();
+  }
+ 
+}
