@@ -1,0 +1,18 @@
+class Solution {
+  int longestPalindrome(String s) {
+   Set a = {};
+   int palindrome=0;
+   for(var aa in s.split('')){
+    if( a.contains(aa)){
+        a.remove(aa);
+        palindrome+=2;
+    }else{
+        a.add(aa);
+    }
+   }
+     if (a.isNotEmpty) {
+    palindrome ++;
+  }
+   return palindrome;
+  }
+}
