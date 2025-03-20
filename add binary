@@ -1,0 +1,10 @@
+class Solution {
+  String addBinary(String a, String b) {
+    BigInt aa = BigInt.parse(a,radix:2);
+    BigInt bb = BigInt.parse(b,radix:2);
+    BigInt cc = aa+bb;
+    return cc.toRadixString(2);
+    
+  }
+  
+}
