@@ -1,0 +1,16 @@
+class Solution {
+  int distributeCandies(List<int> candyType) {
+    int n = candyType.length ~/2;
+    List<int> unique = [];
+    for(var candy in candyType){
+        if(!unique.contains(candy)){
+            unique.add(candy);
+        }
+    }
+    if(unique.length< n ){
+        return unique.length;
+    }else{
+        return n;
+    }
+  }
+}
